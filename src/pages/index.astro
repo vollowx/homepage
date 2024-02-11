@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+const queryTime = () => {
+  return new Date().toLocaleString("en-US", {
+    timeZone: "Asia/Shanghai",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hourCycle: "h23",
+  });
+};
+
+let time = queryTime();
+
+setInterval(() => (time = queryTime()), 1000);
+---
+
+<Layout title="Vollow">
+  <section>
+    <div>
+      <h1 class="mb-2 text-xl font-bold">Vollow</h1>
+      <div class="text-overlay0 mb-2 flex space-x-2">
+        <span>frontend, c/c++ developer</span>
+        <span>-</span>
+        <span class="mb-5 text-overlay0">{time}</span>
+      </div>
+    </div>
+    <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
+      <Card title="GitHub" href="https://github.com/vollowx" body="vollowx" />
+      <Card
+        title="Mail"
+        href="mailto:vollowx@proton.me"
+        body="vollowx@proton.me"
+      />
+    </ul>
+  </section>
+</Layout>

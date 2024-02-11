@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html
+  lang="en"
+  class="mocha scroll-smooth font-sans text-text bg-base antialiased selection:bg-surface1 leading-relaxed"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Frontend and C/C++ Developer" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="mx-auto max-w-3xl px-6 pb-20">
+      <main class="pt-16">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+<style is:global>
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .underlined {
+    @apply underline decoration-surface2 decoration-2 underline-offset-4 transition-colors duration-300 hover:decoration-overlay2 active:decoration-overlay1;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .animated-list li {
+      @apply transition-all duration-300;
+    }
+
+    .animated-list:hover li {
+      @apply opacity-50;
+    }
+
+    .animated-list:hover li:hover {
+      @apply opacity-100;
+    }
+  }
+</style>
