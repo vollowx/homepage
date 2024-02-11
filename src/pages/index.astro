@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
 ---
 
 <Layout title="Vollow">
@@ -13,18 +13,18 @@ import Card from "../components/Card.astro";
         <span class="mb-5 text-overlay0 time">UTC+8</span>
         <script is:inline>
           const queryTime = () => {
-            return new Date().toLocaleString("en-US", {
-              timeZone: "Asia/Shanghai",
-              hour: "numeric",
-              minute: "numeric",
-              second: "numeric",
-              hourCycle: "h23",
-            });
-          };
+            return new Date().toLocaleString('en-US', {
+              timeZone: 'Asia/Shanghai',
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              hourCycle: 'h23',
+            })
+          }
 
-          const timeE = document.querySelector(".time");
-          timeE.textContent = queryTime();
-          setInterval(() => (timeE.textContent = queryTime()), 1000);
+          const timeE = document.querySelector('.time')
+          timeE.textContent = queryTime()
+          setInterval(() => (timeE.textContent = queryTime()), 1000)
         </script>
       </div>
     </div>
