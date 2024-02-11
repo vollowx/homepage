@@ -1,20 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-
-const queryTime = () => {
-  return new Date().toLocaleString("en-US", {
-    timeZone: "Asia/Shanghai",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-    hourCycle: "h23",
-  });
-};
-
-let time = queryTime();
-
-setInterval(() => (time = queryTime()), 1000);
 ---
 
 <Layout title="Vollow">
@@ -24,7 +10,22 @@ setInterval(() => (time = queryTime()), 1000);
       <div class="text-overlay0 mb-2 flex space-x-2">
         <span>frontend, c/c++ developer</span>
         <span>-</span>
-        <span class="mb-5 text-overlay0">{time}</span>
+        <span class="mb-5 text-overlay0 time">UTC+8</span>
+        <script is:inline>
+          const queryTime = () => {
+            return new Date().toLocaleString("en-US", {
+              timeZone: "Asia/Shanghai",
+              hour: "numeric",
+              minute: "numeric",
+              second: "numeric",
+              hourCycle: "h23",
+            });
+          };
+
+          const timeE = document.querySelector(".time");
+          timeE.textContent = queryTime();
+          setInterval(() => (timeE.textContent = queryTime()), 1000);
+        </script>
       </div>
     </div>
     <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
