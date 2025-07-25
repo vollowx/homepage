@@ -1,0 +1,14 @@
+---
+---
+
+<div>
+  <button class="text-text bg-surface0 px-2 mocha" onclick="color('mocha')">mocha</button>
+  <button class="text-text bg-surface0 px-2 latte" onclick="color('latte')">latte</button>
+  <button class="text-text bg-surface0 px-2 oxocarbon-dark" onclick="color('oxocarbon-dark')">oxocarbon-dark</button>
+</div>
+<script>
+  window.color = (color) => {
+    document.documentElement.classList.remove('mocha', 'latte', 'oxocarbon-dark')
+    document.documentElement.classList.add(color)
+  }
+</script>
