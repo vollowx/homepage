@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import Link from '../components/Link.astro'
 ---
 
-<Layout title="Vollow">
+<Layout title="homepage | vollow">
   <section>
-    <div>
-      <h1 class="mb-2 text-xl font-bold">Vollow</h1>
-      <div class="text-overlay0 mb-2 flex space-x-2">
-        <span>frontend, c/c++ developer</span>
-        <span>-</span>
-        <span class="mb-5 text-overlay0 time">UTC+8</span>
+    <div class="mb-2">
+      <h1 class="mb-2 text-xl font-bold">vollow</h1>
+      <div class="text-overlay0 flex space-x-2">
+        <span>now at</span>
+        <span class="time">UTC+8</span>
         <script is:inline>
           const queryTime = () => {
             return new Date().toLocaleString('en-US', {
@@ -27,14 +27,40 @@ import Card from '../components/Card.astro'
           setInterval(() => (timeE.textContent = queryTime()), 1000)
         </script>
       </div>
+      <div class="text-overlay0">code in frontend and c/c++, learning go</div>
+      <div class="text-overlay0">
+        passionate in linux, free softwares and making them aesthetic
+      </div>
     </div>
     <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
-      <Card title="GitHub" href="https://github.com/vollowx" body="vollowx" />
-      <Card
-        title="Mail"
-        href="mailto:vollowx@proton.me"
-        body="vollowx@proton.me"
-      />
+      <Card title="email">
+        <Link href="mailto:vollowx@outlook.com" body="vollowx@outlook.com" />
+      </Card>
+      <Card title="github">
+        <Link href="https://github.com/vollowx" body="vollowx" />
+      </Card>
+      <Card title="gitlab">
+        <Link href="https://gitlab.com/vollowx" body="vollowx" />
+      </Card>
+      <Card title="codeberg">
+        <Link href="https://codeberg.org/vollowx" body="vollowx" />
+      </Card>
+      <Card title="projects">
+        <Link
+          href="https://github.com/vollowx/see"
+          body="see (standard extensible elements)"
+        />
+        <Link
+          href="https://github.com/vollowx/bilibili-catppuccin"
+          body="bilibili-catppuccin"
+        />
+      </Card>
+      <Card title="maintaining">
+        <Link
+          href="https://github.com/catppuccin/nvim"
+          body="catppuccin/nvim"
+        />
+      </Card>
     </ul>
   </section>
 </Layout>

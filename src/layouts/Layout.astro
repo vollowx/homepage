@@ -9,7 +9,7 @@ const { title } = Astro.props
 <!doctype html>
 <html
   lang="en"
-  class="mocha scroll-smooth font-sans text-text bg-base antialiased selection:bg-surface1 leading-relaxed"
+  class="oxocarbon-dark scroll-smooth font-sans text-text bg-base antialiased selection:bg-surface1 leading-relaxed"
 >
   <head>
     <meta charset="UTF-8" />
@@ -22,7 +22,7 @@ const { title } = Astro.props
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -37,6 +37,35 @@ const { title } = Astro.props
 <style is:global>
   * {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .oxocarbon-dark {
+    --ctp-rosewater: 255, 131, 137;
+    --ctp-flamingo: 255, 131, 137;
+    --ctp-pink: 255, 126, 182;
+    --ctp-mauve: 190, 149, 255;
+    --ctp-red: 255, 131, 137;
+    --ctp-maroon: 255, 131, 137;
+    --ctp-peach: 212, 74, 28;
+    --ctp-yellow: 171, 134, 0;
+    --ctp-green: 8, 189, 186;
+    --ctp-teal: 51, 177, 255;
+    --ctp-sky: 51, 177, 255;
+    --ctp-sapphire: 51, 177, 255;
+    --ctp-blue: 120, 169, 255;
+    --ctp-lavender: 120, 169, 255;
+    --ctp-text: 255, 255, 255;
+    --ctp-subtext1: 244, 244, 244;
+    --ctp-subtext0: 224, 224, 224;
+    --ctp-overlay2: 173, 173, 173;
+    --ctp-overlay1: 148, 148, 148;
+    --ctp-overlay0: 122, 122, 122;
+    --ctp-surface2: 79, 79, 79;
+    --ctp-surface1: 56, 56, 56;
+    --ctp-surface0: 46, 46, 46;
+    --ctp-base: 22, 22, 22;
+    --ctp-mantle: 13, 13, 13;
+    --ctp-crust: 0, 0, 0;
   }
 
   .underlined {

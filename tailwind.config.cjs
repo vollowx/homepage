@@ -2,9 +2,9 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     fontFamily: {
-      sans: ['Fire Code', 'monospace'],
-      serif: ['Fira Code', 'monospace'],
-      mono: ['Fira Code', 'monospace'],
+      sans: ['IBM Plex Mono', 'monospace'],
+      serif: ['IBM Plex Mono', 'monospace'],
+      mono: ['IBM Plex Mono', 'monospace'],
     },
     extend: {},
   },

@@ -1,8 +1,6 @@
 ---
 interface Props {
   title: string
-  href: string
-  body: string
 }
 
 const { title, href, body } = Astro.props
@@ -11,8 +9,6 @@ const { title, href, body } = Astro.props
 <li>
   <div class="flex py-3 flex-col gap-1">
     <span class="text-overlay0">{title}</span>
-    <a class="underlined" href={href}>
-      {body}
-    </a>
+    <slot />
   </div>
 </li>
