@@ -1,0 +1,37 @@
+---
+const { frontmatter } = Astro.props
+
+import Layout from './Layout.astro'
+import Link from '../components/Link.astro'
+import ThemeSelector from '../components/ThemeSelector.astro'
+import CatppuccinWebring from '../components/CatppuccinWebring.astro'
+---
+
+<Layout title={frontmatter.title}>
+  <section>
+    <div class="mb-2">
+      <h1 class="mb-2 text-xl font-bold">{frontmatter.title}</h1>
+      <div class="text-overlay0">{frontmatter.description}</div>
+      <div class="text-overlay0 flex space-x-2">published on {frontmatter.pubDate.toString().slice(0, 10)}</div>
+    </div>
+    <slot />
+  </section>
+</Layout>
+
+<style is:global>
+h2 {
+  @apply mt-4 mb-2 font-bold
+}
+p {
+  @apply mb-2
+}
+li {
+  @apply list-disc
+}
+p code {
+  @apply bg-surface0
+}
+pre {
+  @apply p-4 mb-2
+}
+</style>

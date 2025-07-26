@@ -1,14 +1,13 @@
----
----
-
-<div>
-  <button class="text-text bg-surface0 px-2 mocha" onclick="color('mocha')">mocha</button>
-  <button class="text-text bg-surface0 px-2 latte" onclick="color('latte')">latte</button>
-  <button class="text-text bg-surface0 px-2 oxocarbon-dark" onclick="color('oxocarbon-dark')">oxocarbon-dark</button>
+<div class="flex gap-2">
+  <button class="text-text bg-surface0 px-2 mocha" onclick="setTheme('mocha')">mocha</button>
+  <button class="text-text bg-surface0 px-2 latte" onclick="setTheme('latte')">latte</button>
+  <button class="text-text bg-surface0 px-2 oxocarbon-dark" onclick="setTheme('oxocarbon-dark')">oxocarbon-dark</button>
 </div>
 <script>
-  window.color = (color) => {
+  window.setTheme = (color) => {
     document.documentElement.classList.remove('mocha', 'latte', 'oxocarbon-dark')
     document.documentElement.classList.add(color)
+    localStorage.setItem('theme', color)
   }
+  setTheme(localStorage.getItem('theme') || 'oxocarbon-dark')
 </script>

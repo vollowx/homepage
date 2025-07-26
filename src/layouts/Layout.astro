@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props
 
+import Link from '../components/Link.astro'
 import ThemeSelector from '../components/ThemeSelector.astro'
 import CatppuccinWebring from '../components/CatppuccinWebring.astro'
 ---
@@ -20,7 +21,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title} | vollow</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,14 +32,17 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
   </head>
   <body>
     <div class="mx-auto max-w-3xl px-6 pt-16 pb-20 flex flex-col min-h-dvh">
+      <header class="mb-10 flex gap-4" style="view-transition-name: header;">
+        <Link href="/" body="home" />
+        <Link href="/blog" body="blog" />
+      </header>
       <main class="mb-5 flex-1">
-        <section class="mb-5">
-          <ThemeSelector />
-        </section>
         <slot />
       </main>
-      <footer>
+      <footer class="flex" style="view-transition-name: footer;">
         <CatppuccinWebring />
+        <span class="flex-1"></span>
+        <ThemeSelector />
       </footer>
     </div>
   </body>
@@ -77,7 +81,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
     --ctp-crust: 0, 0, 0;
   }
 
-  .underlined {
+  a {
     @apply underline decoration-surface2 decoration-2 underline-offset-4 transition-colors duration-300 hover:decoration-overlay2 active:decoration-overlay1;
   }
 
@@ -93,5 +97,19 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
     .animated-list:hover li:hover {
       @apply opacity-100;
     }
+  }
+
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: fade 0.3s ease both;
+  }
+
+  @keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 </style>
