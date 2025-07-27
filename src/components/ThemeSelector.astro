@@ -1,24 +1,37 @@
 <div>
-  <button class="text-text bg-surface0 px-2 mocha" onclick="setTheme('mocha')"
-    >mocha</button
-  >
-  <button class="text-text bg-surface0 px-2 latte" onclick="setTheme('latte')"
-    >latte</button
-  >
-  <button
-    class="text-text bg-surface0 px-2 oxocarbon-dark"
-    onclick="setTheme('oxocarbon-dark')">oxocarbon-dark</button
-  >
+  <button class="text-text bg-surface0 px-2 mocha">mocha</button>
+  <button class="text-text bg-surface0 px-2 latte">latte</button>
+  <button class="text-text bg-surface0 px-2 oxocarbon-dark">dark</button>
+  <button class="text-text bg-surface0 px-2 oxocarbon-light">light</button>
 </div>
-<script>
-  window.setTheme = (color) => {
+<script is:inline>
+  const setTheme = (color) => {
     document.documentElement.classList.remove(
       'mocha',
       'latte',
       'oxocarbon-dark',
+      'oxocarbon-light',
     )
     document.documentElement.classList.add(color)
     localStorage.setItem('theme', color)
   }
-  setTheme(localStorage.getItem('theme') || 'oxocarbon-dark')
+  setTheme(
+    localStorage.getItem('theme') ||
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'oxocarbon-dark'
+      : 'oxocarbon-light',
+  )
+
+  document
+    .querySelector('button.mocha')
+    ?.addEventListener('click', () => setTheme('mocha'))
+  document
+    .querySelector('button.latte')
+    ?.addEventListener('click', () => setTheme('latte'))
+  document
+    .querySelector('button.oxocarbon-dark')
+    ?.addEventListener('click', () => setTheme('oxocarbon-dark'))
+  document
+    .querySelector('button.oxocarbon-light')
+    ?.addEventListener('click', () => setTheme('oxocarbon-light'))
 </script>
