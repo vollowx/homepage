@@ -17,9 +17,9 @@
   }
   setTheme(
     localStorage.getItem('theme') ||
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'oxocarbon-dark'
-      : 'oxocarbon-light',
+      (window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'oxocarbon-dark'
+        : 'oxocarbon-light'),
   )
 
   document
