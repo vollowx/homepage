@@ -12,8 +12,16 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
     <div class="mb-2">
       <h1 class="mb-2 text-xl font-bold">{frontmatter.title}</h1>
       <div class="text-overlay2">{frontmatter.description}</div>
-      <div class="text-overlay2">published on {frontmatter.pubDate.toString().slice(0, 10)}</div>
-      <div class="text-overlay2 space-x-2">{frontmatter.tags.map(tag => <Link href={"/blog/" + tag} body={tag} />)}</div>
+      <div class="text-overlay2">
+        published on {frontmatter.pubDate.toString().slice(0, 10)}
+      </div>
+      <div class="text-overlay2 space-x-2">
+        {
+          frontmatter.tags.map((tag) => (
+            <Link href={'/blog/' + tag} body={tag} />
+          ))
+        }
+      </div>
     </div>
   </section>
   <section class="content">
@@ -22,22 +30,21 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
 </Layout>
 
 <style is:global>
-.content {
-  h2 {
-    @apply mt-4 mb-2 font-bold
+  .content {
+    h2 {
+      @apply mt-4 mb-2 font-bold;
+    }
+    p {
+      @apply mb-2;
+    }
+    li {
+      @apply list-disc list-inside pl-2;
+    }
+    p code {
+      @apply bg-surface0;
+    }
+    pre {
+      @apply p-4 mb-2;
+    }
   }
-  p {
-    @apply mb-2
-  }
-  li {
-    @apply list-disc list-inside pl-2
-  }
-  p code {
-    @apply bg-surface0
-  }
-  pre {
-    @apply p-4 mb-2
-  }
-}
-
 </style>
