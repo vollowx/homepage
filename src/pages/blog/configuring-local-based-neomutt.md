@@ -6,7 +6,7 @@ description: 'So that we can choose to access the emails without Internet connec
 image:
   url: 'https://docs.astro.build/assets/rose.webp'
   alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ['neomutt', 'email', 'unix-like tools']
+tags: ['neomutt', 'email', 'unix-like-tools']
 ---
 
 Nowadays almost all email providers are using applications on mobile devices and

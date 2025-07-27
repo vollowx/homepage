@@ -18,7 +18,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
       <div class="text-overlay2 space-x-2">
         {
           frontmatter.tags.map((tag) => (
-            <Link href={'/blog/' + tag} body={tag} />
+            <Link href={'/tags/' + tag} body={tag} />
           ))
         }
       </div>
