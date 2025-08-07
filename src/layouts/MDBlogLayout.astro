@@ -3,8 +3,6 @@ const { frontmatter } = Astro.props
 
 import Layout from './Layout.astro'
 import Link from '../components/Link.astro'
-import ThemeSelector from '../components/ThemeSelector.astro'
-import CatppuccinWebring from '../components/CatppuccinWebring.astro'
 ---
 
 <Layout title={frontmatter.title}>
@@ -17,7 +15,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
       </div>
       <div class="text-overlay2 space-x-2">
         {
-          frontmatter.tags.map((tag) => (
+          frontmatter.tags.map((tag: string) => (
             <Link href={'/tags/' + tag} body={tag} />
           ))
         }
