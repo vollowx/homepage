@@ -2,9 +2,10 @@
 interface Props {
   href: string
   body: string
+  ariaLabel?: string
 }
 
-const { href, body } = Astro.props
+const { href, body, ariaLabel } = Astro.props
 ---
 
-<a class="underlined" href={href}>{body}</a>
+<a class="underlined" href={href} aria-label={ariaLabel || body}>{body}</a>

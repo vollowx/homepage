@@ -13,7 +13,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
 <!doctype html>
 <html
   lang="en"
-  class="oxocarbon-dark scroll-smooth font-sans text-text bg-base antialiased selection:bg-surface1 leading-relaxed"
+  class="mocha scroll-smooth font-sans text-text bg-base antialiased selection:bg-surface1 leading-relaxed"
 >
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | vollow</title>
+    <title>{title} - vollow</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,6 +45,7 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
       >
         <CatppuccinWebring />
         <span class="flex-1"></span>
+        <Link href="https://github.com/vollowx/homepage" body="source code" />
         <ThemeSelector />
       </footer>
     </div>
@@ -53,64 +54,6 @@ import CatppuccinWebring from '../components/CatppuccinWebring.astro'
 <style is:global>
   * {
     -webkit-tap-highlight-color: transparent;
-  }
-
-  .oxocarbon-dark {
-    --ctp-rosewater: 255, 131, 137;
-    --ctp-flamingo: 255, 131, 137;
-    --ctp-pink: 255, 126, 182;
-    --ctp-mauve: 190, 149, 255;
-    --ctp-red: 255, 131, 137;
-    --ctp-maroon: 255, 131, 137;
-    --ctp-peach: 212, 74, 28;
-    --ctp-yellow: 171, 134, 0;
-    --ctp-green: 8, 189, 186;
-    --ctp-teal: 51, 177, 255;
-    --ctp-sky: 51, 177, 255;
-    --ctp-sapphire: 51, 177, 255;
-    --ctp-blue: 120, 169, 255;
-    --ctp-lavender: 120, 169, 255;
-    --ctp-text: 255, 255, 255;
-    --ctp-subtext1: 244, 244, 244;
-    --ctp-subtext0: 224, 224, 224;
-    --ctp-overlay2: 173, 173, 173;
-    --ctp-overlay1: 148, 148, 148;
-    --ctp-overlay0: 122, 122, 122;
-    --ctp-surface2: 79, 79, 79;
-    --ctp-surface1: 56, 56, 56;
-    --ctp-surface0: 46, 46, 46;
-    --ctp-base: 22, 22, 22;
-    --ctp-mantle: 13, 13, 13;
-    --ctp-crust: 0, 0, 0;
-  }
-
-  .oxocarbon-light {
-    --ctp-rosewater: 218, 30, 40;
-    --ctp-flamingo: 218, 30, 40;
-    --ctp-red: 218, 30, 40;
-    --ctp-maroon: 218, 30, 40;
-    --ctp-pink: 208, 38, 112;
-    --ctp-mauve: 138, 63, 252;
-    --ctp-peach: 212, 74, 28;
-    --ctp-yellow: 171, 134, 0;
-    --ctp-green: 0, 125, 121;
-    --ctp-teal: 17, 146, 232;
-    --ctp-sky: 17, 146, 232;
-    --ctp-sapphire: 17, 146, 232;
-    --ctp-blue: 15, 98, 254;
-    --ctp-lavender: 15, 98, 254;
-    --ctp-text: 0, 0, 0;
-    --ctp-subtext1: 64, 64, 64;
-    --ctp-subtext0: 71, 71, 71;
-    --ctp-overlay2: 87, 87, 87;
-    --ctp-overlay1: 89, 89, 89;
-    --ctp-overlay0: 115, 115, 115;
-    --ctp-surface2: 140, 140, 140;
-    --ctp-surface1: 209, 209, 209;
-    --ctp-surface0: 230, 230, 230;
-    --ctp-base: 255, 255, 255;
-    --ctp-mantle: 242, 242, 242;
-    --ctp-crust: 235, 235, 235;
   }
 
   a {
