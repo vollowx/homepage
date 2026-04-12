@@ -290,4 +290,4 @@ In general, D feels like a language that actually wants you to get things done.
 It doesn't hide the hardware from you, but also it doesn't make you "reinvent
 the wheel", or not even look for a present solution.
 
-You can find the full code at [vollowx/resolved](https://github.com/vollowx/resolved).
+You can find the full code at [vollowx/resolvedns](https://github.com/vollowx/resolvedns).
