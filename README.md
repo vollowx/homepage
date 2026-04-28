@@ -1,7 +1,5 @@
 # homepage
 
-Just my homepage
-
 ## Commands
 
 | Command                   | Action                                           |
