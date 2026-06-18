@@ -1,34 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import Card from '../../components/Card.astro'
-import Link from '../../components/Link.astro'
 
 const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }))
+  .sort((a: any, b: any) => {
+    return new Date(b.frontmatter.pubDate).getTime()
+      - new Date(a.frontmatter.pubDate).getTime();
+  });
 const uniqueTags = [
   ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
 ]
 ---
 
-<Layout title="blog">
+<Layout title="Blog">
   <section>
-    <div class="mb-2">
-      <h1 class="mb-2 text-xl font-bold">blog</h1>
-    </div>
-    <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
-      <Card title="tags">
-        {
-          uniqueTags.map((tag: string) => (
-            <Link href={'/tags/' + tag} body={tag} />
-          ))
-        }
-      </Card>
-      <Card title="posts">
-        {
-          allPosts.map((post: any) => (
-            <Link href={post.url} body={post.frontmatter.title} />
-          ))
-        }
-      </Card>
+    <h1>Blog</h1>
+    <h2>Tags</h2>
+    <ul>
+      {
+        uniqueTags.map((tag: string) => (
+          <li><a href={'/tags/' + tag}>{tag}</a></li>
+        ))
+      }
+    </ul>
+    <h2>Posts</h2>
+    <ul>
+      {
+        allPosts.map((post: any) => (
+          <li><a href={post.url}>{post.frontmatter.title}</a></li>
+        ))
+      }
     </ul>
   </section>
 </Layout>

@@ -1,7 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import Card from '../../components/Card.astro'
-import Link from '../../components/Link.astro'
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
@@ -29,19 +27,15 @@ const filteredPosts = posts.filter((post: any) =>
 )
 ---
 
-<Layout title={'posts tagged with ' + tag}>
+<Layout title={'Posts tagged with ' + tag}>
   <section>
-    <div class="mb-2">
-      <h1 class="mb-2 text-xl font-bold">posts tagged with {tag}</h1>
-    </div>
-    <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
-      <Card title="posts">
-        {
-          filteredPosts.map((post: any) => (
-            <Link href={post.url} body={post.frontmatter.title} />
-          ))
-        }
-      </Card>
+    <h1>Posts tagged with {tag}</h1>
+    <ul>
+      {
+        filteredPosts.map((post: any) => (
+          <li><a href={post.url}>{post.frontmatter.title}</a></li>
+        ))
+      }
     </ul>
   </section>
 </Layout>

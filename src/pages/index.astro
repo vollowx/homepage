@@ -1,78 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
-import Link from '../components/Link.astro'
 ---
 
-<Layout title="home">
+<Layout title="Home">
   <section>
-    <div class="mb-2">
-      <h1 class="mb-2 text-xl font-bold">vollow (Lucas X. Zhao)</h1>
-      <div class="text-overlay2">
-        <span>now at</span>
-        <span class="time">UTC+8</span>
-        <script is:inline>
-          const queryTime = () => {
-            return new Date().toLocaleString('en-US', {
-              timeZone: 'Asia/Shanghai',
-              hour: 'numeric',
-              minute: 'numeric',
-              second: 'numeric',
-              hourCycle: 'h23',
-            })
-          }
+    <h1>Vollow</h1>
+    <p>
+      It's
+      <span class="time">UTC+8</span>
+      <script is:inline>
+        const timeE = document.querySelector('.time');
 
-          const timeE = document.querySelector('.time')
-          timeE.textContent = queryTime()
-          setInterval(() => (timeE.textContent = queryTime()), 1000)
-        </script>
-      </div>
-      <div class="text-overlay2">code in frontend, c/c++, go and zig</div>
-      <div class="text-overlay2">
-        passionate in linux, free softwares and making them aesthetic
-      </div>
-    </div>
-    <ul class="animated-list grid grid-cols-1 sm:grid-cols-2">
-      <Card title="email">
-        <Link href="mailto:vollowx@outlook.com" body="vollowx@outlook.com" />
-      </Card>
-      <Card title="code">
-        <Link href="https://github.com/vollowx/" body="github" />
-        <Link href="https://gitlab.com/vollowx/" body="gitlab" />
-        <Link href="https://codeberg.org/lucaz/" body="codeberg" />
-      </Card>
-      <Card title="projects">
-        <Link
-          href="https://seele.projects.v9.nz/"
-          body="seele"
-        />
-        <Link
-          href="https://github.com/vollowx/gotodo/"
-          body="gotodo"
-        />
-        <Link
-          href="https://github.com/vollowx/wp-swayidle/"
-          body="wp-swayidle"
-        />
-        <Link
-          href="https://github.com/vollowx/constructor/"
-          body="constructor"
-        />
-        <Link
-          href="https://github.com/vollowx/bilibili-catppuccin/"
-          body="bilibili-catppuccin"
-        />
-      </Card>
-      <Card title="participating in">
-        <Link
-          href="https://github.com/catppuccin/nvim/"
-          body="catppuccin/nvim"
-        />
-        <Link
-          href="https://vue.misaka-fans.space/"
-          body="misaka-fans"
-        />
-      </Card>
+        const queryTime = () => {
+          return new Date().toLocaleString('en-US', {
+            timeZone: 'Asia/Shanghai',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hourCycle: 'h23',
+          })
+        };
+
+        timeE.textContent = queryTime();
+        setTimeout(() => {
+          timeE.textContent = queryTime();
+          setInterval(() => (timeE.textContent = queryTime()), 1000);
+        }, 1000 - new Date().getMilliseconds());
+      </script>
+      in my timezone.
+    </p>
+    <p>
+      I mainly code in TypeScript (Web), C, Go and Zig, basically for my
+      personal interests. You can contact me through
+      <a href="mailto:vollowx@outlook.com" body="email" />.
+    </p>
+    <p>
+      You can find some of my programs on
+      <a href="https://sr.ht/~lucaz/">SourceHut</a> and
+      <a href="https://github.com/vollowx/">GitHub</a>.
+    </p>
+  </section>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <a href="https://seele.projects.v9.nz/">seele</a> -
+        extensible Web Components library, with Material Design 3 components
+        pre-provided.
+      </li>
+      <li>
+        <a href="https://github.com/vollowx/gotodo/">gotodo</a> -
+        todo manager with cli and web interface
+      </li>
+      <li>
+        <a href="https://github.com/vollowx/wp-swayidle/">wp-swayidle</a> -
+        <a href="http://github.com/swaywm/swayidle">swayidle</a> manager, kills
+        it when there is an audio output
+      </li>
+      <li>
+        <a href="https://github.com/vollowx/bilibili-catppuccin/">
+          bilibili-catppuccin</a> - Catppuccin userstyle for BiliBili
+      </li>
+      <li>
+        <a href="https://github.com/catppuccin/nvim/">catppuccin/nvim</a> -
+        (maintainer) Catppuccin colorscheme for Neovim
+      </li>
+      <li>
+        <a href="https://vue.misaka-fans.space/">misaka-fans</a> -
+        (contributor) Fan website for Misaka Mikoto
+      </li>
     </ul>
   </section>
 </Layout>
