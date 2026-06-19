@@ -9,9 +9,9 @@ import Layout from '../layouts/Layout.astro'
       <noscript>
         My timezone is UTC+8
       </noscript>
-      <span class="time"></span>
+      <span class="dynamic-time"></span>
       <script is:inline>
-        const timeE = document.querySelector('.time');
+        const $time = document.querySelector('.dynamic-time');
 
         const queryTime = () => {
           return new Date().toLocaleString('en-US', {
@@ -23,11 +23,13 @@ import Layout from '../layouts/Layout.astro'
           })
         };
 
-        timeE.textContent = queryTime();
+        const displayTime = () =>
+          $time.textContent = 'It\'s ' + queryTime() + ' now in my timezone';
+
+        displayTime();
         setTimeout(() => {
-          timeE.textContent = queryTime();
-          setInterval(() => (timeE.textContent = 'It\'s ' + queryTime()
-            + ' now in my timezone'), 1000);
+          displayTime();
+          setInterval(displayTime, 1000);
         }, 1000 - new Date().getMilliseconds());
       </script>
     </p>
