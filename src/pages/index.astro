@@ -5,9 +5,11 @@ import Layout from '../layouts/Layout.astro'
 <Layout title="Vollow's Homepage">
   <section>
     <h1>Hi! It's Vollow here</h1>
-    <p>
-      It's
-      <span class="time">UTC+8</span>
+    <p class="metadata desc">
+      <noscript>
+        My timezone is UTC+8
+      </noscript>
+      <span class="time"></span>
       <script is:inline>
         const timeE = document.querySelector('.time');
 
@@ -24,14 +26,14 @@ import Layout from '../layouts/Layout.astro'
         timeE.textContent = queryTime();
         setTimeout(() => {
           timeE.textContent = queryTime();
-          setInterval(() => (timeE.textContent = queryTime()), 1000);
+          setInterval(() => (timeE.textContent = 'It\'s ' + queryTime()
+            + ' now in my timezone'), 1000);
         }, 1000 - new Date().getMilliseconds());
       </script>
-      now in my timezone.
     </p>
-    <p>My name is Lucas X. Zhao, also known as Vollow.</p>
+    <p>My name is Lucas X. Zhao (and Vollow).</p>
     <p>
-      I mainly code in TypeScript (Web), C, Go and Zig, out of my personal
+      I mainly code in C, Go, Zig and frontend stuffs, out of my personal
       interests.
       You can find some of my programs on
       <a href="https://sr.ht/~lucaz/">SourceHut</a> and

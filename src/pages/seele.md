@@ -27,3 +27,15 @@ Documentations and demos are at [seele.projects.v9.nz](https://seele.projects.v9
 - [npm package](https://www.npmjs.com/package/@vollowx/seele)
 - [The source at SourceHut](https://sr.ht/~lucaz/seele)
 - [The source at GitHub](https://github.com/vollowx/seele)
+
+## Similar Projects
+
+- [Material Web](https://material-web.dev/) - similar to seele, this project
+uses Lit but is dedicated to Material Design instead of a generic library and
+developed by Google developers
+- [M3E](https://matraic.github.io/m3e/#/getting-started/overview.html) - also
+built on Lit and has a rather complete component collection
+- [MUI (Material UI)](https://mui.com/material-ui/) - tried-and-tested React
+component library, supporting only Material Design 2
+- [Vuetify](https://vuetifyjs.com/en/) - tried-and-tested Vue component library,
+supporting only Material Design 2

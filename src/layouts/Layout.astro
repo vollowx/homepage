@@ -19,14 +19,25 @@ const { title } = Astro.props
   </head>
   <body>
     <header style="view-transition-name: header;">
-      <a href="/">[home]</a>
-      <a href="/blog">[blog]</a>
-      <a href="https://git.sr.ht/~lucaz/homepage">[source code]</a>
+      <p>
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+      </p>
+      <hr />
     </header>
     <main>
       <slot />
     </main>
     <footer style="view-transition-name: footer;">
+      <hr />
+      <p>
+        Copyright © 2025-2026 by Lucas X. Zhao.
+        <a href="https://git.sr.ht/~lucaz/homepage">Source</a>.
+        <br />
+        Licensed under
+        <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+        unless otherwise noted.
+      </p>
       <!-- <CatppuccinWebring /> -->
     </footer>
   </body>
@@ -44,11 +55,22 @@ const { title } = Astro.props
   }
 
   body {
+    margin: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: sans-serif;
   }
 
   main {
     max-width: 720px;
+    flex: 1;
+  }
+
+  hr {
+    opacity: 0.5;
   }
 
   img {
@@ -72,5 +94,14 @@ const { title } = Astro.props
 
   a {
     overflow-wrap: break-word;
+  }
+
+  .metadata {
+    opacity: 0.85;
+    margin: 0;
+  }
+  .metadata.desc {
+    margin-top: -1.245rem; /* 1.5rem * 0.83em, the margin of (our) h1 */
+    margin-bottom: 1.245rem;
   }
 </style>
