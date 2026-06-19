@@ -15,22 +15,20 @@ const { title } = Astro.props
     <meta name="color-scheme" content="dark light" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} - Vollow</title>
+    <title>{title}</title>
   </head>
   <body>
-    <div>
-      <header style="view-transition-name: header;">
-        <a href="/">[home]</a>
-        <a href="/blog">[blog]</a>
-        <a href="https://git.sr.ht/~lucaz/homepage">[source code]</a>
-      </header>
-      <main>
-        <slot />
-      </main>
-      <footer style="view-transition-name: footer;">
-        <!-- <CatppuccinWebring /> -->
-      </footer>
-    </div>
+    <header style="view-transition-name: header;">
+      <a href="/">[home]</a>
+      <a href="/blog">[blog]</a>
+      <a href="https://git.sr.ht/~lucaz/homepage">[source code]</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer style="view-transition-name: footer;">
+      <!-- <CatppuccinWebring /> -->
+    </footer>
   </body>
 </html>
 <style is:global>
@@ -38,40 +36,41 @@ const { title } = Astro.props
     navigation: auto;
   }
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: fade 0.24s ease both;
-  }
-
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  ::view-transition-old(post-title-*),
+  ::view-transition-new(post-title-*) {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
   }
 
   body {
-    font-family: monospace;
+    font-family: sans-serif;
+  }
+
+  main {
+    max-width: 720px;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   h1 {
-    display: block;
     font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
   h2 {
-    display: block;
     font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  a {
+    overflow-wrap: break-word;
   }
 </style>

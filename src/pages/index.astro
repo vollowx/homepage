@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="Homepage">
+<Layout title="Vollow's Homepage">
   <section>
     <h1>Hi! It's Vollow here</h1>
     <p>
@@ -27,8 +27,9 @@ import Layout from '../layouts/Layout.astro'
           setInterval(() => (timeE.textContent = queryTime()), 1000);
         }, 1000 - new Date().getMilliseconds());
       </script>
-      in my timezone.
+      now in my timezone.
     </p>
+    <p>My name is Lucas X. Zhao, also known as Vollow.</p>
     <p>
       I mainly code in TypeScript (Web), C, Go and Zig, out of my personal
       interests.
@@ -38,7 +39,7 @@ import Layout from '../layouts/Layout.astro'
     </p>
     <p>
       You can contact me through
-      <a href="mailto:vollowx@outlook.com">email</a>, and verify them through
+      <a href="mailto:vollowx@outlook.com">email</a>, and verify them with
       <a href="/vollow.asc">my OpenGPG key</a>.
     </p>
   </section>
@@ -46,7 +47,7 @@ import Layout from '../layouts/Layout.astro'
     <h2>Projects</h2>
     <ul>
       <li>
-        <a href="https://seele.projects.v9.nz/">seele</a> -
+        <a href="./seele/">seele</a> -
         extensible Web Components library, with Material Design 3 components
         pre-provided.
       </li>
@@ -55,7 +56,7 @@ import Layout from '../layouts/Layout.astro'
         todo manager with cli and web interface
       </li>
       <li>
-        <a href="https://github.com/vollowx/wp-swayidle/">wp-swayidle</a> -
+        <a href="./wp-swayidle/">wp-swayidle</a> -
         <a href="http://github.com/swaywm/swayidle">swayidle</a> manager, kills
         it when there is an audio output
       </li>

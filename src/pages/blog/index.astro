@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import { toViewTransitionName } from '../../utils/css.ts';
 
 const allPosts = Object.values(import.meta.glob('./*.md', { eager: true }))
   .sort((a: any, b: any) => {
@@ -11,14 +12,15 @@ const uniqueTags = [
 ]
 ---
 
-<Layout title="Blog">
+<Layout title="Vollow's Blog">
   <section>
     <h1>Blog</h1>
     <h2>Tags</h2>
     <ul>
       {
         uniqueTags.map((tag: string) => (
-          <li><a href={'/tags/' + tag}>{tag}</a></li>
+          <li><a href={'/tags/' + tag} style={'view-transition-name: tag-'
+            + tag}>{tag}</a></li>
         ))
       }
     </ul>
@@ -26,7 +28,12 @@ const uniqueTags = [
     <ul>
       {
         allPosts.map((post: any) => (
-          <li><a href={post.url}>{post.frontmatter.title}</a></li>
+          <li>
+            <a href={post.url} style={'view-transition-name: post-title-'
+              + toViewTransitionName(post.frontmatter.title)}>
+              {post.frontmatter.title}
+            </a>
+          </li>
         ))
       }
     </ul>

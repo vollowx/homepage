@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import { toViewTransitionName } from '../../utils/css.ts';
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
@@ -27,13 +28,18 @@ const filteredPosts = posts.filter((post: any) =>
 )
 ---
 
-<Layout title={'Posts tagged with ' + tag}>
+<Layout title={'Posts tagged with ' + tag + ' - Vollow'}>
   <section>
-    <h1>Posts tagged with {tag}</h1>
+    <h1>Posts tagged with <span style={'view-transition-name: tag-' + tag + ';'}>{tag}</span></h1>
     <ul>
       {
         filteredPosts.map((post: any) => (
-          <li><a href={post.url}>{post.frontmatter.title}</a></li>
+          <li>
+            <a href={post.url} style={'view-transition-name: post-title-'
+              + toViewTransitionName(post.frontmatter.title)}>
+              {post.frontmatter.title}
+            </a>
+          </li>
         ))
       }
     </ul>

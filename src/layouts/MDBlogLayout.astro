@@ -2,20 +2,23 @@
 const { frontmatter } = Astro.props
 
 import Layout from './Layout.astro'
+import { toViewTransitionName } from '../utils/css.ts';
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title + ' - Vollow'}>
   <section>
-    <h1>{frontmatter.title}</h1>
-    <p class="metadata">{frontmatter.description}</p>
+    <h1><span style={'view-transition-name: post-title-'
+      + toViewTransitionName(frontmatter.title)}>{frontmatter.title}</span></h1>
+    <p class="metadata desc">{frontmatter.description}</p>
     <p class="metadata">
       published on {frontmatter.pubDate.toString().slice(0, 10)}
     </p>
     <p class="metadata tags">
       {
         frontmatter.tags.map((tag: string) => (
-          <a href={'/tags/' + tag}>{tag}</a>
-        ))
+          <a href={'/tags/' + tag} style={'view-transition-name: tag-'
+            + tag}>{tag}</a>
+          ))
       }
     </p>
   </section>
@@ -26,16 +29,15 @@ import Layout from './Layout.astro'
 
 <style is:global>
   .metadata {
-    opacity: 0.8;
+    opacity: 0.85;
     margin: 0;
+  }
+  .metadata.desc {
+    margin-top: -1.245rem; /* 1.5rem * 0.83em, the margin of (our) h1 */
+    margin-bottom: 1.245rem;
   }
   .metadata.tags {
     display: flex;
-    gap: 1rem;
-  }
-  .content {
-    a {
-      overflow-wrap: break-word;
-    }
+    gap: 0.5rem;
   }
 </style>
