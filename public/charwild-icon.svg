@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blue"  x1="0" y1="0" x2="0" y2="0"><stop stop-color="#3A94E0" /></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="0"><stop stop-color="#65C569" /></linearGradient>
+    <linearGradient id="gray"  x1="0" y1="0" x2="0" y2="0"><stop stop-color="#CCCCCC" /></linearGradient>
+    <linearGradient id="red"   x1="0" y1="0" x2="0" y2="0"><stop stop-color="#E3535E" /></linearGradient>
+  </defs>
+
+  <rect x="0"   y="0"   width="100" height="100" fill="url(#blue)" />
+  <rect x="100" y="0"   width="100" height="100" fill="url(#blue)" />
+  <rect x="200" y="0"   width="100" height="100" fill="url(#blue)" />
+  <rect x="300" y="0"   width="100" height="100" fill="url(#green)" />
+
+  <rect x="0"   y="100" width="100" height="100" fill="url(#blue)" />
+  <rect x="100" y="100" width="100" height="100" fill="url(#blue)" />
+  <rect x="200" y="100" width="100" height="100" fill="url(#gray)" />
+  <rect x="300" y="100" width="100" height="100" fill="url(#green)" />
+
+  <rect x="0"   y="200" width="100" height="100" fill="url(#blue)" />
+  <rect x="100" y="200" width="100" height="100" fill="url(#red)" />
+  <rect x="200" y="200" width="100" height="100" fill="url(#green)" />
+  <rect x="300" y="200" width="100" height="100" fill="url(#green)" />
+
+  <rect x="0"   y="300" width="100" height="100" fill="url(#blue)" />
+  <rect x="100" y="300" width="100" height="100" fill="url(#green)" />
+  <rect x="200" y="300" width="100" height="100" fill="url(#green)" />
+  <rect x="300" y="300" width="100" height="100" fill="url(#green)" />
+</svg>
