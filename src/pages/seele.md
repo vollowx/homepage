@@ -18,7 +18,7 @@ It also provides styled components in the following design guideline(s):
 
 ![seele components screenshot](/20260619-seele-components.png)
 
-# Features
+## Features
 
 What's the differences comparing to other projects?
 
@@ -31,7 +31,7 @@ What's the differences comparing to other projects?
   meaning that its size is relatively small and the compatibility is not the
   best
 
-# Documentations
+## Documentations
 
 [Documentations and demos](https://tideover.cc/seele/docs/).
 
