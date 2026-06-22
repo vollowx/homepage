@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:fo="http://www.w3.org/1999/XSL/Format"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://tideover.cc/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/blog/</loc>
+  <lastmod>2026-06-22T07:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/wp-swayidle/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/charwild/</loc>
+  <lastmod>2026-06-22T07:05:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/tags/d/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/tags/network/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/tags/neomutt/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/tags/email/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/tags/unix-like-tools/</loc>
+  <lastmod>2026-06-22T07:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/blog/writing-a-dns-resolver/</loc>
+  <lastmod>2026-06-22T07:05:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/blog/configuring-local-based-neomutt/</loc>
+  <lastmod>2026-06-22T07:05:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/</loc>
+  <lastmod>2026-06-22T02:55:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/button/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/checkbox/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/field/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/input/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/item/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/list/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/list-item/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/menu/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/menu-item/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/option/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/select/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/slider/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/toggle-button/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/classes/tooltip/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/mixins/attachable/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/mixins/form-associated/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/mixins/internals-attached/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/button/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/checkbox/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/fab/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/icon-button/</loc>
+  <lastmod>2026-06-22T02:55:31+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/list/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/menu/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/ripple/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/select/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/slider/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/switch/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/text-field/</loc>
+  <lastmod>2026-06-22T02:55:32+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/toolbar/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/m3/components/tooltip/</loc>
+  <lastmod>2026-06-22T02:55:33+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/button/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/checkbox/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/field/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/input/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/item/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/list/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/list-item/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/menu/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/menu-item/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/option/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/select/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/slider/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/toggle-button/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/classes/tooltip/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/mixins/attachable/</loc>
+  <lastmod>2026-06-22T02:55:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/mixins/form-associated/</loc>
+  <lastmod>2026-06-22T02:55:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/mixins/internals-attached/</loc>
+  <lastmod>2026-06-22T02:55:35+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/button/</loc>
+  <lastmod>2026-06-22T02:55:37+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/checkbox/</loc>
+  <lastmod>2026-06-22T02:55:37+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/fab/</loc>
+  <lastmod>2026-06-22T02:55:37+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/icon-button/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/list/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/menu/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/ripple/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/select/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/slider/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/switch/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/text-field/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/toolbar/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/m3/components/tooltip/</loc>
+  <lastmod>2026-06-22T02:55:38+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/en-US/base/mixins/focus-delegated/</loc>
+  <lastmod>2026-06-22T02:55:34+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://tideover.cc/seele/docs/zh-CN/base/mixins/focus-delegated/</loc>
+  <lastmod>2026-06-22T02:55:35+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+</urlset>
