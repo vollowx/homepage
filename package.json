@@ -12,16 +12,16 @@
   },
   "dependencies": {
     "@astrojs/check": "0.9.6",
-    "@astrojs/rss": "^4.0.18",
+    "@astrojs/rss": "^4.0.19",
     "@types/canvas-confetti": "^1.9.0",
-    "astro": "5.17.1",
-    "autoprefixer": "^10.5.0",
+    "astro": "6.4.8",
+    "autoprefixer": "^10.5.2",
     "canvas-confetti": "^1.9.4",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.16",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "prettier": "^3.8.4",
+    "prettier": "^3.9.5",
     "prettier-plugin-astro": "^0.13.0"
   }
 }

@@ -12,7 +12,7 @@ title: 'seele - Standard Extensible Elements'
 [https://tideover.cc/seele/](https://tideover.cc/seele/)
 [docs/](https://tideover.cc/seele/docs/)
 
-Seele (**S**tandard **E**xtensible **Ele**ments) is a extensible
+seele (**S**tandard **E**xtensible **Ele**ments) is a extensible
 [Web Components][web-comps] library with a focus on accessibility and
 keyboard-control.
 
