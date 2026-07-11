@@ -7,6 +7,10 @@ title: 'seele - Standard Extensible Elements'
 
 [![npm package](https://img.shields.io/npm/v/%40vollowx%2Fseele)](https://www.npmjs.com/package/@vollowx/seele)
 [![builds.sr.ht status](https://builds.sr.ht/~lucaz/seele.svg)](https://builds.sr.ht/~lucaz/seele?)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@vollowx/seele)
+
+[https://tideover.cc/seele/](https://tideover.cc/seele/)
+[docs/](https://tideover.cc/seele/docs/)
 
 Seele (**S**tandard **E**xtensible **Ele**ments) is a extensible
 [Web Components][web-comps] library with a focus on accessibility and
@@ -40,6 +44,28 @@ What's the differences comparing to other projects?
 - [npm package](https://www.npmjs.com/package/@vollowx/seele)
 - [The source at SourceHut](https://sr.ht/~lucaz/seele)
 - [The source at GitHub](https://github.com/vollowx/seele)
+
+## Browser Support
+
+seele relies on the folling modern web standards:
+
+- [`ElementInternals`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals), Baseline 2023
+- [Constructable Stylesheets](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet), Baseline 2024, C[^1] 90, F 126
+- [`:dir()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:dir), Baseline 2023, C 120, F 49
+- [`:state()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:state), Baseline 2024, C 125, F 126
+
+And all that result in:
+
+- Chromium: >= 125
+- Firefox: >= 126
+
+It is 2026 now, you don't really need to worry about this. But in the future,
+these following web features might be used and require higher browser versions:
+
+- [anchor()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/anchor), Baseline 2026, C 125, F 147, will remove the dependency `floating-dom`
+- [`::view-*`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::view-transition), Baseline 2025, C 111, F 144, will optimize some animations for menu, dialog, etc
+
+[^1]: C = Chromium, F = Firefox.
 
 ## Similar Projects
 
