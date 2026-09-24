@@ -96,3 +96,12 @@ the minimum required version of seele_
 [web-comps]: https://developer.mozilla.org/en-US/docs/Web/API/Web_components
 [apg-patterns]: https://www.w3.org/WAI/ARIA/apg/patterns/
 [lit]: https://lit.dev/
+[element-internals]: https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals
+[:dir]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:dir
+[constructable-stylesheets]: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet
+[:state]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:state
+[aria-active]: https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals/ariaActiveDescendantElement
+[css-numeric-value]: https://developer.mozilla.org/en-US/docs/Web/API/CSSNumericValue
+[popover-api]: https://developer.mozilla.org/en-US/docs/Web/API/Popover_API
+[starting-style]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@starting-style
+[anchor]: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/anchor
