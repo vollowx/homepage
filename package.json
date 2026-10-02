@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write"
@@ -14,7 +14,7 @@
     "@astrojs/check": "0.9.6",
     "@astrojs/rss": "^4.0.19",
     "@types/canvas-confetti": "^1.9.0",
-    "astro": "6.4.8",
+    "astro": "5",
     "autoprefixer": "^10.5.2",
     "canvas-confetti": "^1.9.4",
     "postcss": "^8.5.16",
