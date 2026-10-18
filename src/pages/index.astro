@@ -1,5 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { toViewTransitionName } from '../utils/css.ts';
+
+const allPosts = Object.values(import.meta.glob('./blog/*.md', { eager: true }))
+  .sort((a: any, b: any) => {
+    return new Date(b.frontmatter.pubDate).getTime()
+      - new Date(a.frontmatter.pubDate).getTime();
+  });
 ---
 
 <Layout title="Vollow's Homepage">
@@ -46,44 +53,58 @@ import Layout from '../layouts/Layout.astro'
   </section>
   <section>
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <a href="./seele/">seele</a> -
-        extensible Web Components library, with Material Design 3 components
+    <dl>
+      <dt><a href="./seele/">seele</a></dt>
+      <dd>
+        An extensible Web Components library, with Material Design 3 components
         pre-provided.
-      </li>
-      <li>
-        <a href="https://github.com/vollowx/gotodo/">gotodo</a> -
-        todo manager with cli and web interface
-      </li>
-      <li>
-        <a href="./wp-swayidle/">wp-swayidle</a> -
+      </dd>
+
+      <dt><a href="https://github.com/vollowx/gotodo/">gotodo</a></dt>
+      <dd>Todo manager with cli and web interface.</dd>
+
+      <dt><a href="./wp-swayidle/">wp-swayidle</a></dt>
+      <dd>
         <a href="http://github.com/swaywm/swayidle">swayidle</a> manager, kills
-        it when there is an audio output
-      </li>
-      <li>
-        <a href="./charwild/">charwild</a> -
-        unfinished survival game, in the terminal
-      </li>
-      <li>
-        <a href="https://github.com/vollowx/bilibili-catppuccin/">
-          bilibili-catppuccin</a> - Catppuccin userstyle for BiliBili
-      </li>
-      <li>
-        <a href="https://github.com/catppuccin/nvim/">catppuccin/nvim</a> -
-        Catppuccin colorscheme for Neovim (as a maintainer)
-      </li>
-      <li>
-        <a href="https://vue.misaka-fans.space/">misaka-fans</a> -
-        fan website for Misaka Mikoto (as a contributor)
-      </li>
-    </ul>
+        it when there is an audio output.
+      </dd>
+
+      <dt><a href="./charwild/">charwild</a></dt>
+      <dd>Unfinished survival game, in the terminal.</dd>
+
+      <dt><a href="https://github.com/vollowx/bilibili-catppuccin/">
+        bilibili-catppuccin</a></dt>
+      <dd>Catppuccin userstyle for BiliBili.</dd>
+
+      <dt><a href="https://github.com/catppuccin/nvim/">catppuccin/nvim</a></dt>
+      <dd>Catppuccin colorscheme for Neovim (as a maintainer).</dd>
+
+      <dt><a href="https://vue.misaka-fans.space/">misaka-fans</a></dt>
+      <dd>Fan website for Misaka Mikoto (as a collaborator).</dd>
+    </dl>
 
     <h2>Contact</h2>
     <ul>
       <li><a href="mailto:vollowx@outlook.com">vollowx@outlook.com</a></li>
       <li><a href="https://bsky.app/profile/vollowx.bsky.social">Bluesky</a></li>
     </ul>
+
+    <h2>Writings</h2>
+    <dl>
+      {
+        allPosts.slice(0,3).map((post: any) => (
+          <dt>
+            <a href={post.url} style={'view-transition-name: post-title-'
+              + toViewTransitionName(post.frontmatter.title)}>
+              {post.frontmatter.title}
+            </a>
+          </dt>
+          <dd>{post.frontmatter.description}</dd>
+          <dd>{post.frontmatter.pubDate.toString().slice(0, 7)}</dd>
+        ))
+      }
+    </dl>
+    <p><a href="/blog/">View all posts</a></p>
 
     <h2>Others</h2>
     <ul>
