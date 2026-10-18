@@ -2,10 +2,10 @@ import rss, { pagesGlobToRssItems } from '@astrojs/rss'
 
 export async function GET(context) {
   return rss({
-    title: "vollow's blog",
-    description: "vollow's blog",
+    title: "Vollow's blog",
+    description: "What will you find here...",
     site: context.site,
-    items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
+    items: await pagesGlobToRssItems(import.meta.glob('./blog/*.md')),
     customData: `<language>en-us</language>`,
   })
 }
