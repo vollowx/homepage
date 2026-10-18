@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MDBlogLayout.astro
-title: 'Writing a DNS Relsover in D'
+title: 'Writing a DNS relsover in D'
 pubDate: 2026-04-11
 description: 'Learning D...'
 tags: ['d', 'network']
@@ -11,7 +11,7 @@ previous sessions, and I really liked its language features like baked in
 string type and operations, array operations and so on. So how do we learn a
 language? Surely, we're going to write a toy project with it!
 
-## Before It Begins
+## Before it begins
 
 - Homepage: https://dlang.org/
 - What is a [DNS resolver](https://en.wikipedia.org/wiki/Domain_Name_System#DNS_resolvers)
@@ -20,7 +20,7 @@ language? Surely, we're going to write a toy project with it!
   - [DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION](https://datatracker.ietf.org/doc/html/rfc1035)
   - [Clarifications to the DNS Specification](https://datatracker.ietf.org/doc/html/rfc2181)
 
-## Defining the Structs
+## Defining the structs
 
 DNS packets aren't just strings, they are packed binary data. Every DNS request
 starts with a 12-byte header according to IETF[^1].
@@ -48,7 +48,7 @@ void main() {
 
 [^1]: DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION (Section 4.1.1) https://datatracker.ietf.org/doc/html/rfc1035#autoid-41
 
-## Encoding the Domain
+## Encoding the domain
 
 In DNS, labels are used instead of a full domain. For example, `www.google.com`
 becomes `[3] 'w' 'w' 'w' [6] 'g' 'o' 'o' 'g' 'l' 'e' [3] 'c' 'o' 'm' [0]`. Each
@@ -77,7 +77,7 @@ ubyte[] encodeDomain(string domain) {
 }
 ```
 
-## Assembling the Full Packet
+## Assembling the full packet
 
 A DNS query consists of the header, the encoded name, the type (like A, AAAA,
 MX), and the class (usually IN for Internet).
@@ -129,7 +129,7 @@ void main() {
 }
 ```
 
-## Send and Pray
+## Send and pray
 
 DNS usually uses UDP since it's fast and a persistent connection using
 protocols like TCP is not needed. The `std.socket` module will be used.
@@ -165,7 +165,7 @@ response, there might be some problems with the format, network, etc.
 
 [^2]: DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION (Section 4.2.1) https://datatracker.ietf.org/doc/html/rfc1035#autoid-46
 
-## Parsing the Response
+## Parsing the response
 
 First we decode the first 12 bytes of the response to get a `DNSHeader` struct
 to better deal with it.

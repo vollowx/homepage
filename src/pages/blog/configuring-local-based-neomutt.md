@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MDBlogLayout.astro
-title: 'Configuring Local-based neomutt'
+title: 'Configuring local-based neomutt'
 pubDate: 2025-07-26
 description: 'So that we can choose to access the emails without Internet connection.'
 image:
@@ -20,7 +20,7 @@ comes the `neomutt` and `mbsync`.
 
 _Note that all the instructions below are for Outlook._
 
-## Before We Can Configure Anything
+## Before we can configure anything
 
 Some of the email providers asks for using OAuth to get the IMAP password, so
 another script is needed: `mutt_oauth2.py`. `mutt_oauth2.py` is provided by
@@ -80,7 +80,7 @@ When the script asks for client ID, we use the client ID of Thunderbird:
 
 After this script finishes, we get our token file in place.
 
-## Tasting neomutt with Emails Online
+## Tasting neomutt with emails online
 
 ```
 # ~/.config/mutt/muttrc
@@ -121,7 +121,7 @@ emails.
 neomutt
 ```
 
-## Keep Them Locally
+## Keep them locally
 
 Now we can make use of the other tool, `mbsync`. On Arch Linux, the package
 name is `isync`, so please check this before installing.
