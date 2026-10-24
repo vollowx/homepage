@@ -1,11 +1,16 @@
 ---
-const { frontmatter } = Astro.props
+const { frontmatter, headings = [] } = Astro.props
 
 import Layout from './Layout.astro'
 import { toViewTransitionName } from '../utils/css.ts';
+
+const toc = headings.filter(
+  (heading: { depth: number; slug: string }) =>
+    heading.depth === 2 && heading.slug !== 'footnote-label',
+)
 ---
 
-<Layout title={frontmatter.title + ' - Vollow'}>
+<Layout title={frontmatter.title + ' - Vollow'} description={frontmatter.description}>
   <section>
     <h1><span style={'view-transition-name: post-title-'
       + toViewTransitionName(frontmatter.title)}>{frontmatter.title}</span></h1>
@@ -22,14 +27,56 @@ import { toViewTransitionName } from '../utils/css.ts';
       }
     </p>
   </section>
-  <section class="content">
-    <slot />
-  </section>
+  <div class:list={['post', { 'has-toc': toc.length > 0 }]}>
+    {
+      toc.length > 0 && (
+        <aside id="toc">
+          <h2>In this page</h2>
+          <ul>
+            {
+              toc.map((heading: { slug: string; text: string }) => (
+                <li><a href={'#' + heading.slug}>{heading.text}</a></li>
+              ))
+            }
+          </ul>
+        </aside>
+      )
+    }
+    <section class="content">
+      <slot />
+    </section>
+  </div>
 </Layout>
 
 <style is:global>
   .metadata.tags {
     display: flex;
     gap: 0.5rem;
+  }
+
+  @media (min-width: 80rem) {
+    .post {
+      --content-w: calc(720px - 16px);
+      --rail-w: calc(240px + 2rem); /* toc width + gap */
+      display: grid;
+      grid-template-columns: 1fr minmax(0, var(--content-w)) 1fr;
+      gap: 2rem;
+      align-items: start;
+      width: calc(var(--content-w) + var(--rail-w) + var(--rail-w));
+      margin-inline: calc(0px - var(--rail-w));
+    }
+
+    .content {
+      grid-column: 2;
+    }
+
+    #toc {
+      grid-column: 3;
+      grid-row: 1;
+      top: 16px;
+      position: sticky;
+      align-self: start;
+      margin-block-start: -0.17em;
+    }
   }
 </style>

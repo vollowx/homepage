@@ -1,9 +1,10 @@
 ---
 interface Props {
   title: string
+  description?: string
 }
 
-const { title } = Astro.props
+const { title, description = "Vollow's homepage, blog and project info." } = Astro.props
 ---
 
 <!doctype html>
@@ -16,8 +17,9 @@ const { title } = Astro.props
     <link rel="icon" type="image/png" sizes="any" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta name="description" content="Vollow's homepage, blog and project info." />
+    <meta name="description" content={description} />
     <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
   </head>
   <body>
     <header style="view-transition-name: header;">
@@ -68,14 +70,12 @@ const { title } = Astro.props
     flex: 1;
   }
 
-  @media (prefers-color-scheme: dark) {
-    hr {
-      opacity: 0.5;
-    }
-  }
-
   img {
     max-width: 100%;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
   }
 
   h1 {
@@ -116,4 +116,95 @@ const { title } = Astro.props
   .small-caps {
     font-variant: small-caps;
   }
+
+  :root {
+    --md-sys-color-primary: #39608f;
+    --md-sys-color-surface-tint: #39608f;
+    --md-sys-color-on-primary: #fff;
+    --md-sys-color-primary-container: #d3e4ff;
+    --md-sys-color-on-primary-container: #1e4876;
+    --md-sys-color-secondary: #545f70;
+    --md-sys-color-on-secondary: #fff;
+    --md-sys-color-secondary-container: #d7e3f8;
+    --md-sys-color-on-secondary-container: #3c4758;
+    --md-sys-color-tertiary: #6c5677;
+    --md-sys-color-on-tertiary: #fff;
+    --md-sys-color-tertiary-container: #f5d9ff;
+    --md-sys-color-on-tertiary-container: #543f5e;
+    --md-sys-color-error: #ba1a1a;
+    --md-sys-color-on-error: #fff;
+    --md-sys-color-error-container: #ffdad6;
+    --md-sys-color-on-error-container: #93000a;
+    --md-sys-color-background: #f8f9ff;
+    --md-sys-color-on-background: #191c20;
+    --md-sys-color-surface: #f8f9ff;
+    --md-sys-color-on-surface: #191c20;
+    --md-sys-color-surface-variant: #dfe2eb;
+    --md-sys-color-on-surface-variant: #43474e;
+    --md-sys-color-outline: #73777f;
+    --md-sys-color-outline-variant: #c3c6cf;
+    --md-sys-color-scrim: #000;
+    --md-sys-color-surface-dim: #d8dae0;
+    --md-sys-color-surface-bright: #f8f9ff;
+    --md-sys-color-surface-container-lowest: #fff;
+    --md-sys-color-surface-container-low: #f2f3fa;
+    --md-sys-color-surface-container: #ecedf4;
+    --md-sys-color-surface-container-high: #e7e8ee;
+    --md-sys-color-surface-container-highest: #e1e2e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --md-sys-color-primary: #a3c9fe;
+      --md-sys-color-surface-tint: #a3c9fe;
+      --md-sys-color-on-primary: #00315b;
+      --md-sys-color-primary-container: #1e4876;
+      --md-sys-color-on-primary-container: #d3e4ff;
+      --md-sys-color-secondary: #bbc7db;
+      --md-sys-color-on-secondary: #263141;
+      --md-sys-color-secondary-container: #3c4758;
+      --md-sys-color-on-secondary-container: #d7e3f8;
+      --md-sys-color-tertiary: #d8bde3;
+      --md-sys-color-on-tertiary: #3c2947;
+      --md-sys-color-tertiary-container: #543f5e;
+      --md-sys-color-on-tertiary-container: #f5d9ff;
+      --md-sys-color-error: #ffb4ab;
+      --md-sys-color-on-error: #690005;
+      --md-sys-color-error-container: #93000a;
+      --md-sys-color-on-error-container: #ffdad6;
+      --md-sys-color-background: #111418;
+      --md-sys-color-on-background: #e1e2e8;
+      --md-sys-color-surface: #111418;
+      --md-sys-color-on-surface: #e1e2e8;
+      --md-sys-color-surface-variant: #43474e;
+      --md-sys-color-on-surface-variant: #c3c6cf;
+      --md-sys-color-outline: #8d9199;
+      --md-sys-color-outline-variant: #43474e;
+      --md-sys-color-scrim: #000;
+      --md-sys-color-surface-dim: #111418;
+      --md-sys-color-surface-bright: #37393e;
+      --md-sys-color-surface-container-lowest: #0c0e13;
+      --md-sys-color-surface-container-low: #191c20;
+      --md-sys-color-surface-container: #1d2024;
+      --md-sys-color-surface-container-high: #272a2f;
+      --md-sys-color-surface-container-highest: #32353a;
+    }
+
+    body {
+      accent-color: var(--md-sys-color-primary);
+      background: var(--md-sys-color-background);
+      color: var(--md-sys-color-on-background);
+    }
+
+    ::selection {
+      background-color: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary-container);
+    }
+
+    a {
+      color: var(--md-sys-color-primary);
+    }
+
+    hr {
+      border-color: var(--md-sys-color-outline-variant);
+    }
 </style>
